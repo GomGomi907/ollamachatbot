@@ -3,7 +3,7 @@ export async function POST(req: Request) {
         const { messages, systemPrompt } = await req.json();
 
         const baseURL = process.env.LOCAL_LLM_BASE_URL || "http://localhost:11434/v1";
-        const model = process.env.LOCAL_LLM_MODEL || "llama3";
+        const model = process.env.LOCAL_LLM_MODEL || "gpt-oss:20b";
 
         const defaultSystemPrompt = `You are a helpful, high-vibe coding assistant. 
 You are running locally on the user's machine.
